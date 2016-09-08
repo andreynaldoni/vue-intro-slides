@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Vue.js overview - Andrey Naldoni</title>
+
+    <meta name="author" content="Andrey Naldoni">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 0 - Vue.js -->
+        <section data-transition="zoom">
+          <img class="logo" data-src="img/vue.svg" width="40%"/>
+          <h2 class="title">Vue.js</h2>
+          <h4>An overview and pratical demonstration</h4>
+        </section>
+        <!-- Slide 1 - Myself -->
+        <section data-background-transition="zoom" data-transition="slide-in fade-out" data-autoslide="250" data-background="img/me-bg.jpg" class="author">
+          <div class="black-bg">
+            <table>
+              <tr>
+                <td>
+                  <img src="img/me.jpg" alt="Andrey Naldoni" class="me fragment">
+                </td>
+                <td style="vertical-align: top">
+                  <h3 class="fragment">Andrey Naldoni</h3>
+                  <li class="fragment">Software Developer @ <span style="">Bematech by TOTVS</span></li>
+                  <li class="fragment">Programming @ ETEC Praia Grande</li>
+                  <li class="fragment">System Analysis and Development @ FATEC Praia Grande</li>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="social">
+                    <h3 class="fragment">Social</h3>
+                    <span class="fragment"><i class="fa fa-facebook-square"></i> /AndreyNaldoni</span><br>
+                    <span class="fragment"><i class="fa fa-linkedin-square"></i> /in/AndreyNaldoni</span><br>
+                    <span class="fragment"><i class="fa fa-twitter"></i> @AndreyNaldoni</span><br>
+                    <span class="fragment"><i class="fa fa-chrome"></i> andreynaldoni.com</span><br>
+                    <span class="fragment"><i class="fa fa-envelope"></i> AndreyNaldoni@gmail.com</span>
+                  </div>
+                  <div class="social">
+                    <h3 class="fragment">Github</h3>
+                    <span data-autoslide="0" class="fragment"><i class="fa fa-github"></i> /andreynaldoni</span><br>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <!-- Slide 2 - Table of Contents -->
+        <section class="no-dots" data-autoslide="250">
+          <table>
+            <h2 class="fragment fade-up">Table of contents</h2>
+            <ul>
+              <li class="fragment fade-up">What's Vue.js?</li>
+              <li class="fragment fade-up">Reactive Data Binding</li>
+              <li class="fragment fade-up">Directives</li>
+              <li class="fragment fade-up">Components</li>
+              <li data-autoslide="0" class="fragment fade-up">Show me the code :)</li>
+            </ul>
+          </table>
+        </section>
+        <!-- Slide 3x - What's Vue.js? -->
+        <section data-background-transition="zoom">
+          <!-- Slide 3.1 - Concepts -->
+          <section data-transition="slide">
+            <h3>So, what's Vue.js?</h3><br>
+            <ul>
+              <li>Front-end lightweight <span class="fragment highlight-green">(76kb on disk)</span>* js library;</li>
+              <li>Reactive data binding and composable view components;</li>
+              <li>Very easy to use, straightforward syntax;</li>
+              <li>175+ Supporting Libraries & Plugins <i class="fa fa-smile-o"></i>**;</li>
+              <li>Ready for build <span class="fragment highlight-blue">large-scale applications</span>.</li>
+            </ul><br><br>
+            <small>
+              *Production version <u></u>1.0.26 <a href="https://vuejs.org/guide/installation.html#Standalone">https://vuejs.org/guide/installation.html#Standalone</a>.<br>
+              **Awesome Vue.js list <a href="https://github.com/vuejs/awesome-vue">https://github.com/vuejs/awesome-vue</a>.
+            </small>
+          </section>
+          <!-- Slide 3.2 - Compatibility -->
+          <section data-background-transition="zoom" data-autoslide="400">
+            <h3 class="fragment fade-up">Vue.js compatibility</h3>
+            <img src="img/compatibility.png" alt="Vue.js compatibility list" class="fragment">
+            <small data-autoslide="0" class="fragment fade-up">*Compatibility list. From <a href="https://github.com/vuejs/vue">https://github.com/vuejs/vue</a></small>
+          </section>
+          <!-- Slide 3.3 - Vue.js Excinting GIF -->
+          <section data-transition="slide" data-background="img/whats-vue.gif">
+
+          </section>
+        </section>
+        <!-- Slide 4x - Reactive Data Binding -->
+        <section data-background-transition="zoom" data-autoslide="400">
+          <!-- Slide 4.1 - Concepts -->
+          <section data-transition="slide">
+            <h3 class="fragment fade-up">Reactive Data Binding</h3>
+            <img src="img/mvvm.png" alt="MVVM Architecture" class="fragment">
+            <small data-autoslide="0" class="fragment fade-up">*MVVM Architecture. From <a href="https://vuejs.org/guide/overviw.html">vuejs.org/guide/overviw.html</a></small>
+          </section>
+          <!-- Slide 4.2 - Code Example -->
+          <section data-background-transition="zoom" data-transition="slide" data-autoslide="250" data-background="rgba(0,0,0,1)">
+            <h3 class="white-text fragment">Here some code...</h3>
+            <h4 class="white-text fragment fade-up">HTML</h4>
+            <pre class="white-text fragment fade-up"><code class="xml hljs" data-trim contenteditable>
+
+&lt;div id="app"&gt;
+  {{ msg }}
+&lt;/div&gt;
+            </code></pre>
+            <h4 class="white-text fragment fade-up">Javascript</h4>
+            <pre data-autoslide="0" class="fragment fade-up"><code class="javascript hljs" data-trim contenteditable>
+new Vue({
+  el: '#app',
+  data: { msg: 'Hello World!'}
+});
+            </code></pre>
+          </section>
+          <!-- Slide 4.3 - Two way data-binding GIF -->
+          <section data-background="img/binding.gif" data-autoslide="0">
+
+          </section>
+        </section>
+        <!-- Slide 5x - Directives -->
+        <section data-background-transition="zoom">
+          <!-- Slide 5.1 - Concepts -->
+          <section data-transition="slide">
+            <h3>Directives</h3>
+            <ul>
+              <li>HTML attribute vs directive;</li>
+              <li>Bind DOM Structure;</li>
+              <li>Transictions effects...</li>
+            </ul>
+          </section>
+          <!-- Slide 5.2 - Code Example -->
+          <section data-background-transition="zoom" data-transition="slide" data-autoslide="250" data-background="rgba(0,0,0,1)">
+            <h3 class="white-text fragment fade-up">Another portion of code...</h3>
+            <h4 class="white-text fragment fade-up">HTML</h4>
+            <pre class="fragment fade-up"><code class="xml hljs" data-trim contenteditable>
+&lt;div id="example"&gt;
+  &lt;p v-if="greeting"&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+            <h4 class="white-text fragment fade-up">Javascript</h4>
+            <pre data-autoslide="0" class="fragment fade-up"><code class="javascript hljs" data-trim contenteditable>
+new Vue({
+  el: '#example',
+  data: {
+    greeting: true
+  }
+})
+            </code></pre>
+          </section>
+        </section>
+        <!-- Slide 6x - Components -->
+        <section data-background-transition="zoom" data-autoslide="400">
+          <!-- Slide 6.1 - Concepts -->
+          <section data-transition="slide">
+            <h3 class="fragment fade-up">Components</h3>
+            <img src="img/components.png" alt="Components" class="fragment">
+            <small data-autoslide="0" class="fragment fade-up">*Component System. From <a href="https://vuejs.org/guide/overviw.html">vuejs.org/guide/overviw.html</a></small>
+          </section>
+          <!-- Slide 6.2 - Code Example -->
+          <section data-background-transition="zoom" data-transition="slide" data-autoslide="250" data-background="rgba(0,0,0,1)">
+            <h3 class="white-text fragment fade-up">More static code example...</h3>
+            <h4 class="white-text fragment fade-up">HTML</h4>
+            <pre data-autoslide="0" class="fragment fade-up"><code class="xml hljs" data-trim contenteditable>
+&lt;div id="example"&gt;
+  &lt;app-nav&gt;&lt;/app-nav&gt;
+  &lt;app-view&gt;
+    &lt;app-sidebar&gt;&lt;/app-sidebar&gt;
+    &lt;app-content&gt;&lt;/app-content&gt;
+  &lt;/app-view&gt;
+&lt;/div&gt;
+            </code></pre>
+          </section>
+          <!-- Slide 6.3 - Defining components -->
+          <section data-background-transition="zoom" data-transition="slide" data-autoslide="250" data-background="rgba(0,0,0,1)">
+            <h3 class="white-text fragment fade-up">Defining components</h3>
+            <h4 class="white-text fragment fade-up">HTML</h4>
+            <pre class="fragment fade-up"><code class="xml hljs" data-trim contenteditable>
+&lt;div id="example"&gt;
+  &lt;my-component&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+            </code></pre>
+            <h4 class="white-text fragment fade-up">Javascript</h4>
+            <pre class="fragment fade-up"><code class="javascript hljs" data-trim contenteditable>
+// Defining
+var MyComponent = Vue.extend({
+  template: '&lt;div&gt;A custom component!&lt;/div&gt;'
+})
+// Registering
+Vue.component('my-component', MyComponent)
+// Vue root instance
+new Vue({
+  el: '#example'
+})
+
+            </code></pre>
+            <small data-autoslide="0" class="fragment fade-up">*vue-loader required, made with vue-cli generator.</small>
+          </section>
+          <!-- Slide 6.4 - Vue component code example -->
+          <section data-background-transition="zoom" data-transition="slide" data-background="img/com-ex.png" data-autoslide="0">
+
+          </section>
+        </section>
+        <!-- Slide 7x - Show me the code :) -->
+        <section data-background-transition="zoom" data-background="img/code-bg.jpg">
+          <section data-transition="slide">
+            <div class="black-bg">
+              <h2 style="color: white">&lt;/&gt; Let´s code guys! &lt;/&gt;</h2>
+            </div>
+          </section>
+        </section>
+        <!-- Slide 8 - Extra slide: Going further -->
+        <section data-background-transition="zoom">
+          <h3>What you should look:</h3>
+          <ul>
+            <li><b>vue-cli</b></li>
+            <ul>
+              <li>A simple CLI for scaffolding Vue.js project;</li>
+              <li>5 official templates and hundreads of custom templates;</li>
+            </ul>
+            <li><b>vuex</b></li>
+            <ul>
+              <li>Vuex is an application architecture for centralized state management in Vue.js applications;</li>
+            </ul>
+            <li><b>vue.js 2 (currently in RC)</b></li>
+            <ul>
+              <li>It promises to speed up rendering and lower memory consumption by up to 2~4x in most scenarios</li>
+            </ul>
+          </ul>
+          <small>
+            <br>vue-cli (Github) - <a href="https://github.com/vuejs/vue-cli">https://github.com/vuejs/vue-cli</a><br>
+            Vuex - <a href="http://vuex.vuejs.org/">http://vuex.vuejs.org/</a><br>
+            Vue.js 2 (Annoucement) - <a href="https://vuejs.org/2016/04/27/announcing-2.0/">https://vuejs.org/2016/04/27/announcing-2.0/</a><br>
+            Vue.js 2 (Branch next) - <a href="https://github.com/vuejs/vue/tree/next/">https://github.com/vuejs/vue/tree/next/</a>
+          </small>
+        </section>
+        <!-- Slide 9 - Thanks -->
+        <section data-background-transition="zoom" data-background="rgba(0,0,0,1)" data-background-video="img/thanks.mp4">
+          <div>
+            <h2 class="white-text ">Thanks for your attention!</h2><br>
+            <h3 class="white-text">Useful links:</h3>
+            <p class="white-text">
+              Vue.js Official  - https://vuejs.org/<br>
+              Vue.js Brasil Community - http://www.vuejs-brasil.com.br/<br>
+              Vue.js Brasil Telegram - https://telegram.me/vuejsbrasil<br>
+              Vue.js SP Meetup - https://www.meetup.com/VueJS-SP/
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        transition: 'default',
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+          keyboard: {
+          39: 'next',
+          37: 'prev'
+        }
+      });
+    </script>
+  </body>
+</html>
